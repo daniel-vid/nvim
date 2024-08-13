@@ -75,6 +75,7 @@ return require('packer').startup(function(use)
     use("laytan/cloak.nvim")
 
     use("nvim-tree/nvim-web-devicons")
+
     use({
         "stevearc/oil.nvim",
         config = function()
@@ -97,6 +98,22 @@ return require('packer').startup(function(use)
         'j-hui/fidget.nvim',
         config = function()
             require('fidget').setup({
+            })
+        end,
+    })
+
+    use({
+        "stevearc/aerial.nvim",
+        config = function()
+            require("aerial").setup()
+        end,
+    })
+
+    use({
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup({
+                current_line_blame = true,
             })
         end,
     })
