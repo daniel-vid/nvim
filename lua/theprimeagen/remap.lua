@@ -49,3 +49,12 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "<C-a>", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ai", "<cmd>CodeCompanionToggle<cr>")
+vim.keymap.set("v", "<leader>ai", "<cmd>CodeCompanionToggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionAdd<cr>", { noremap = true, silent = true })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
