@@ -117,4 +117,29 @@ return require('packer').startup(function(use)
             })
         end,
     })
+
+    use({
+        "olimorris/codecompanion.nvim",
+        config = function()
+            require("codecompanion").setup()
+        end,
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        }
+    })
+
+    use({ 'stevearc/dressing.nvim' })
+
+    use({
+        "declancm/cinnamon.nvim",
+        config = function()
+            require("cinnamon").setup({
+                keymaps = {
+                    basic = true,
+                },
+                options = { mode = "cursor" },
+            })
+        end,
+    })
 end)
