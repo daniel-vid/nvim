@@ -26,6 +26,7 @@ return {
             {},
             vim.lsp.protocol.make_client_capabilities(),
             cmp_lsp.default_capabilities())
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
 
         require("fidget").setup({})
         require("mason").setup()

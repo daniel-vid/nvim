@@ -2,6 +2,7 @@ require("set")
 require("remap")
 require("lazy_init")
 require('mini.statusline').setup()
+require('mini.icons').setup()
 
 local augroup = vim.api.nvim_create_augroup
 local TheGroup = augroup('TheGroup', {})
